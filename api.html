@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Inter:wght@500;600;700&display=swap&_v=20240317215535"
+    rel="stylesheet"
+  />
+  
+  <link rel="stylesheet" href="css/style.min.css?_v=20240317215535" />
+  <title>Cheat Checkers</title>
+</head>
+
+
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <aside class="sidebar">
+    <div class="sidebar__wrapper">
+      <div class="sidebar__header header-sidebar">
+        <a class="header-sidebar__avatar" href="#">
+          <img
+            class="header-sidebar__avatar-img"
+            src="img/avatar.jpg"
+            alt="profile"
+          />
+          <span class="header-sidebar__name">knight</span>
+        </a>
+        <div class="header-sidebar__btns">
+          <button class="header-sidebar__note-btn _notifications"></button>
+          <button class="header-sidebar__exit-btn _exit"></button>
+        </div>
+        
+      </div>
+      <div class="sidebar__block block-sidebar">
+        <h5 class="block-sidebar__title">Общее</h5>
+        <ul class="block-sidebar__list">
+          <li class="block-sidebar__item">
+            <button style="margin-bottom: 3px;" id="main" class="block-sidebar__btn">
+              <a class="block-sidebar-link" href="index.html"><span class="_home"></span>Главная</a>
+            </button>
+          </li>
+          <li class="block-sidebar__item">
+            <div class="block-sidebar__spoller">
+              <div class="block-sidebar__spoller-title">
+                <button
+                  tabindex="-1"
+                  class="block-sidebar__btn"
+                >
+                  <a class="block-sidebar-link" href="users.html"><span class="_users"></span>Пользователи</a>
+                </button>
+               
+              </div>
+              <!-- <div class="block-sidebar__spoller-text">
+                <div>
+                  <button id="moderators">
+                    <a class="block-sidebar-link" href="moderators.html"><span class="_moderators"></span>Модераторы</a>
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__block block-sidebar">
+        <h5 class="block-sidebar__title">Модерация</h5>
+        <ul class="block-sidebar__list">
+          <li class="block-sidebar__item">
+            <div class="block-sidebar__spoller">
+              <div class="block-sidebar__spoller-title">
+                <div
+                  class="block-sidebar__btn"
+                  tabindex="-1"
+                >
+                  <a class="block-sidebar-link" href="check.html"><span class="_shield"></span>Проверка</a>
+                </div>
+              </div>
+              <!-- <div class="block-sidebar__spoller-text">
+                <div >
+                  <button id="history">
+                    <a class="block-sidebar-link" href="history.html"><span class="_clock"></span>История</a>
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__block block-sidebar">
+        <h5 class="block-sidebar__title">Настройки</h5>
+        <ul class="block-sidebar__list">
+          <li class="block-sidebar__item">
+            <button class="block-sidebar__btn">
+              <a class="block-sidebar-link" href="profile.html"><span class="_profile"></span>Профиль</a>
+            </button>
+          </li>
+          <li class="block-sidebar__item">
+            <button class="block-sidebar__btn active">
+              <span class="_control"></span>Управление API
+            </button>
+          </li>
+          <li class="block-sidebar__item">
+            <button class="block-sidebar__btn">
+              <a class="block-sidebar-link" href="journal.html"><span class="_actions"></span>Журнал действий</a>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidebar__notifications notifications">
+      <div class="notifications__title">Уведомления</div>
+      <ul class="notifications__list">
+        <li class="notifications__item">
+          <div class="notifications__item-content">
+            <p class="notifications__item-title">AAAAAAAAAAAAAAAAAAAAAAuto layout</p>
+            <p class="notifications__item-date">2 февраля</p>
+          </div>
+          <a href="#" class="notifications__item-link">Читать &#8594</a>
+        </li>
+        <li class="notifications__item">
+          <div class="notifications__item-content">
+            <p class="notifications__item-title">Обновление 2.11.56SSSSSSSSSSSSSSSSSSSSSSSSSSS</p>
+            <p class="notifications__item-date">2 февраля</p>
+          </div>
+          <a href="#" class="notifications__item-link">Читать &#8594</a>
+        </li>
+        <li class="notifications__item">
+          <div class="notifications__item-content">
+            <p class="notifications__item-title">Обновление 2.11.56</p>
+            <p class="notifications__item-date">2 февраля</p>
+          </div>
+          <a href="#" class="notifications__item-link">Читать &#8594</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  
+  
+  
+  
+  
+        <section class="addkey">
+  <div class="addkey__wrapper">
+    <button type="button" class="addkey__link">
+      &#8592 Управление API
+    </button>
+    <h2 class="addkey__title">Создание API-ключа</h2>
+    <form class="addkey__form form-addkey" action="#">
+      <p class="form-addkey__name">Название</p>
+      <label class="form-addkey__subname-1" for="apiName"
+        >Дайте вашему API-ключу имя.</label
+      >
+      <input
+        class="form-addkey__input"
+        type="text"
+        id="newApiName"
+        placeholder="Например, Мой ключ"
+      />
+      <p class="form-addkey__name">Разрешения</p>
+      <p class="form-addkey__subname-2">
+        Выберите разрешения на доступ, куда сможет обращаться этот ключ.
+      </p>
+      <ul class="form-addkey__list">
+        <li class="form-addkey__item">
+          <p class="form-addkey__list-name">
+            <span class="form-addkey__item-ischecked"></span>
+            <span>База проверенных игроков</span>
+          </p>
+          <p class="form-addkey__list-subname">
+            Получение информации об игроках по идентификатору, имени
+            пользователя или дискорду.
+          </p>
+        </li>
+        <li class="form-addkey__item">
+          <p class="form-addkey__list-name">
+            <span class="form-addkey__item-ischecked"></span>
+            <span>Управление модераторами</span>
+          </p>
+          <p class="form-addkey__list-subname">
+            Добавление и удаление модераторов.
+          </p>
+        </li>
+        <li class="form-addkey__item">
+          <p class="form-addkey__list-name">
+            <span class="form-addkey__item-ischecked"></span>
+            <span>Временный ключ доступа</span>
+          </p>
+          <p class="form-addkey__list-subname">
+            Генерация ключа временного доступа для игроков.
+          </p>
+        </li>
+        <li class="form-addkey__item">
+          <p class="form-addkey__list-name">
+            <span class="form-addkey__item-ischecked"></span>
+            <span>История проверок</span>
+          </p>
+          <p class="form-addkey__list-subname">
+            Получения информации о текущих или всех проверках.
+          </p>
+        </li>
+      </ul>
+      <button class="form-addkey__add-btn" type="button"><span class="_plus"></span><span>Создать ключ</span></button>
+    </form>
+  </div>
+</section>
+
+        <section class="api-page active">
+  <div class="api__wrapper">
+    <div class="api__header">
+      <div class="api__header-text">
+        <h2 class="api__title">Управление API</h2>
+        <p class="api__subtitle">
+          Управляйте сервисами через посторонние приложения
+        </p>
+      </div>
+      <button type="button" class="api__header-btn">
+        <span class="_plus"></span>Новый ключ
+      </button>
+    </div>
+    <div class="api__list-wrapper">
+      <div class="api__add-api-key add-api-key">
+        <h4 class="add-api-key__title">У вас нет API-ключей</h4>
+        <p class="add-api-key__text">
+          Создайте свой первый API-ключ для интеграции в ваши приложения и
+          обеспечения прямого доступа к нашим сервисам.
+        </p>
+        <button type="button" class="add-api-key__btn">
+          <span class="_plus"></span><span>Новый ключ</span>
+        </button>
+      </div>
+      <ul class="api__list list-api active">
+        <li class="list-api__item">
+          <div class="list-api__text">
+            <p class="list-api__title">for testing-1</p>
+            <p class="list-api__time">Создан 2 минуты назад</p>
+          </div>
+          <button class="list-api__btn" type="button">Управление</button>
+        </li>
+        <li class="list-api__item">
+          <div class="list-api__text">
+            <p class="list-api__title">for testing-2</p>
+            <p class="list-api__time">Создан 2 минуты назад</p>
+          </div>
+          <button class="list-api__btn" type="button">Управление</button>
+        </li>
+      </ul>
+    </div>
+    <button class="api__docs-btn">
+      <span class="_docs"></span><span>Документация</span>
+    </button>
+  </div>
+</section>
+
+        <section class="token-for-testing">
+  <div class="token-for-testing__wrapper">
+    <button type="button" class="token-for-testing__header-link">
+      &#8592 Управление API
+    </button>
+    <h2 class="token-for-testing__title">
+      Токен <span id="addkeyname"></span>
+    </h2>
+    <p class="token-for-testing__subtitle">
+      Скопируйте этот токен, чтобы получить доступ к API
+    </p>
+    <p class="token-for-testing__text">
+      В целях безопасности токены можно просмотреть только один раз при их
+      создании. Если вы забыли или потеряли доступ к своему токену, создайте
+      новый.
+    </p>
+    <div class="token-for-testing__input-wrapper">
+      <p class="token-for-testing__copy-value">
+        xvGXRVwpdPNKYkwJnC935fMDhzR7AcsS
+      </p>
+      <button class="token-for-testing__copy-btn">
+        <span class="_copy"></span>
+      </button>
+    </div>
+    <p class="token-for-testing__subtitle">Проверьте этот токен</p>
+    <p class="token-for-testing__text">
+      Для проверки правильной работы вашего токена скопируйте и вставьте в
+      терминал следующую команду CURL.
+    </p>
+    <div class="token-for-testing__input-wrapper">
+      <p class="token-for-testing__copy-value">
+        curl -X GET "https://api.cheatchecker.com/verify" \ <br />
+        -H "Authorization: Bearer xvGXRVwpdPNKYkwJnC935fMDhzR7AcsS" \ <br />
+        -H "Content-Type:application/json"
+      </p>
+      <button class="token-for-testing__copy-btn">
+        <span class="_copy"></span>
+      </button>
+    </div>
+    <button class="token-for-testing__btn" type="button">
+      Я скопировал токен
+    </button>
+  </div>
+</section>
+
+        <section class="keycontrol">
+  <div class="keycontrol__wrapper">
+    <div class="keycontrol__header">
+      <div class="keycontrol__header-text">
+        <button type="button" class="keycontrol__header-link">
+          &#8592 Управление API
+        </button>
+        <h2 class="keycontrol__title">
+          Управление <span id="keyname">for testing</span>
+        </h2>
+      </div>
+      <button type="button" class="keycontrol__header-btn">
+        <span class="_round-arrow"></span>
+        <span>Сбросить токен</span>
+      </button>
+    </div>
+    <form class="keycontrol__form form-keycontrol" action="#">
+      <p class="form-keycontrol__name">Название</p>
+      <label class="form-keycontrol__subname-1" for="apiName"
+        >Дайте вашему API-ключу имя.</label
+      >
+      <input
+        class="form-keycontrol__input"
+        type="text"
+        id="apiName"
+        value="for testing"
+      />
+      <p class="form-keycontrol__name">Разрешения</p>
+      <p class="form-keycontrol__subname-2">
+        Выберите разрешения на доступ, куда сможет обращаться этот ключ.
+      </p>
+      <ul class="form-keycontrol__list">
+        <li class="form-keycontrol__item">
+          <p class="form-keycontrol__list-name">
+            <span class="form-keycontrol__item-ischecked checked"></span>
+            <span>База проверенных игроков</span>
+          </p>
+          <p class="form-keycontrol__list-subname">
+            Получение информации об игроках по идентификатору, имени
+            пользователя или дискорду.
+          </p>
+        </li>
+        <li class="form-keycontrol__item">
+          <p class="form-keycontrol__list-name">
+            <span class="form-keycontrol__item-ischecked checked"></span>
+            <span>Управление модераторами</span>
+          </p>
+          <p class="form-keycontrol__list-subname">
+            Добавление и удаление модераторов.
+          </p>
+        </li>
+        <li class="form-keycontrol__item">
+          <p class="form-keycontrol__list-name">
+            <span class="form-keycontrol__item-ischecked"></span>
+            <span>Временный ключ доступа</span>
+          </p>
+          <p class="form-keycontrol__list-subname">
+            Генерация ключа временного доступа для игроков.
+          </p>
+        </li>
+        <li class="form-keycontrol__item">
+          <p class="form-keycontrol__list-name">
+            <span class="form-keycontrol__item-ischecked"></span>
+            <span>История проверок</span>
+          </p>
+          <p class="form-keycontrol__list-subname">
+            Получения информации о текущих или всех проверках.
+          </p>
+        </li>
+      </ul>
+      <div class="form-keycontrol__save-btns">
+        <button class="form-keycontrol__save-btn" type="button">
+          Сохранить
+        </button>
+        <button class="form-keycontrol__del-btn" type="button">Удалить</button>
+      </div>
+    </form>
+  </div>
+  <div class="keycontrol__saved">
+    <span class="_checked"></span>
+    <span>Сохранено</span>
+  </div>
+</section>
+
+      </main>
+      <script defer src="js/app.min.js?_v=20240317215535"></script>
+    </div>
+  </body>
+</html>

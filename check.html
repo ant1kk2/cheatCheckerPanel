@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Inter:wght@500;600;700&display=swap&_v=20240317215535"
+    rel="stylesheet"
+  />
+  
+  <link rel="stylesheet" href="css/style.min.css?_v=20240317215535" />
+  <title>Cheat Checkers</title>
+</head>
+
+
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <aside class="sidebar">
+  <div class="sidebar__wrapper">
+    <div class="sidebar__header header-sidebar">
+      <a class="header-sidebar__avatar" href="#">
+        <img
+          class="header-sidebar__avatar-img"
+          src="img/avatar.jpg"
+          alt="profile"
+        />
+        <span class="header-sidebar__name">knight</span>
+      </a>
+      <div class="header-sidebar__btns">
+        <button class="header-sidebar__note-btn _notifications"></button>
+        <button class="header-sidebar__exit-btn _exit"></button>
+      </div>
+      
+    </div>
+    <div class="sidebar__block block-sidebar">
+      <h5 class="block-sidebar__title">Общее</h5>
+      <ul class="block-sidebar__list">
+        <li class="block-sidebar__item">
+          <button style="margin-bottom: 3px;" id="main" class="block-sidebar__btn ">
+            <a class="block-sidebar-link" href="index.html"><span class="_home"></span>Главная</a>
+          </button>
+        </li>
+        <li class="block-sidebar__item">
+          <div class="block-sidebar__spoller">
+            <div class="block-sidebar__spoller-title">
+              <button
+                tabindex="-1"
+                class="block-sidebar__btn"
+              >
+                <a class="block-sidebar-link" href="users.html"><span class="_users"></span>Пользователи</a>
+              </button>
+              
+            </div>
+            <!-- <div class="block-sidebar__spoller-text">
+              <div>
+                <button id="moderators">
+                  <a class="block-sidebar-link" href="moderators.html"><span class="_moderators"></span>Модераторы</a>
+                </button>
+              </div>
+            </div> -->
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar__block block-sidebar">
+      <h5 class="block-sidebar__title">Модерация</h5>
+      <ul class="block-sidebar__list">
+        <li class="block-sidebar__item">
+          <div data-spollers data-one-spoller class="block-sidebar__spoller">
+            <div class="block-sidebar__spoller-title">
+              <button
+                class="block-sidebar__btn active spolleractive"
+                tabindex="-1"
+                type="button"
+                data-spoller
+              >
+                <span class="_shield"></span>Проверка
+              </button>
+              <div class="block-sidebar__spoller-text">
+                  <div >
+                    <button id="history">
+                      <a class="block-sidebar-link" href="history.html"><span class="_clock"></span>История</a>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar__block block-sidebar">
+      <h5 class="block-sidebar__title">Настройки</h5>
+      <ul class="block-sidebar__list">
+        <li class="block-sidebar__item">
+          <button class="block-sidebar__btn ">
+            <a class="block-sidebar-link" href="profile.html"><span class="_profile"></span>Профиль</a>
+          </button>
+        </li>
+        <li class="block-sidebar__item">
+          <button class="block-sidebar__btn">
+            <a class="block-sidebar-link" href="api.html"><span class="_control"></span>Управление API</a>
+          </button>
+        </li>
+        <li class="block-sidebar__item">
+          <button class="block-sidebar__btn">
+            <a class="block-sidebar-link" href="journal.html"><span class="_actions"></span>Журнал действий</a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar__notifications notifications">
+    <div class="notifications__title">Уведомления</div>
+    <ul class="notifications__list">
+      <li class="notifications__item">
+        <div class="notifications__item-content">
+          <p class="notifications__item-title">AAAAAAAAAAAAAAAAAAAAAAuto layout</p>
+          <p class="notifications__item-date">2 февраля</p>
+        </div>
+        <a href="#" class="notifications__item-link">Читать &#8594</a>
+      </li>
+      <li class="notifications__item">
+        <div class="notifications__item-content">
+          <p class="notifications__item-title">Обновление 2.11.56SSSSSSSSSSSSSSSSSSSSSSSSSSS</p>
+          <p class="notifications__item-date">2 февраля</p>
+        </div>
+        <a href="#" class="notifications__item-link">Читать &#8594</a>
+      </li>
+      <li class="notifications__item">
+        <div class="notifications__item-content">
+          <p class="notifications__item-title">Обновление 2.11.56</p>
+          <p class="notifications__item-date">2 февраля</p>
+        </div>
+        <a href="#" class="notifications__item-link">Читать &#8594</a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+        <section class="cp1 active">
+  <div class="cp1__wapper">
+    <div class="cp1__title">Проверка</div>
+    <div class="cp1__form form-cp1">
+      <div class="form-cp1__title">Новая проверка</div>
+      <div class="form-cp1__text">
+        Инициируйте проверку подозреваемого игрока для анализа на сторонние
+        программы или приложения.
+      </div>
+      <button class="form-cp1__btn"><span class="_plus"></span>Начать</button>
+    </div>
+  </div>
+</section>
+
+        <section class="cp2">
+  
+  <div class="cp2__wapper">
+    <div class="cp2__title">Проверка</div>
+    <h4 class="cp2__subtitle">Временный доступ</h4>
+    <p class="cp2__text">Перед началом предоставьте информацию от чекера</p>
+    <div class="cp2__table table-cp2">
+      <div class="table-cp2__row">
+        <p class="table-cp2__text">
+          <span>Ссылка на скачивание</span>
+          <button class="_copy"></button></p>
+        <a
+          href="cheatchecker.com/client/Ty32AM6ZGPGKET8k6z"
+          class="table-cp2__link"
+          >cheatchecker.com/client/Ty32AM6ZGPGKET8k6z</a
+        >
+      </div>
+      <div class="table-cp2__row">
+        <p class="table-cp2__text">
+          <span>Ключ активации</span>
+          <button class="_copy"></button>
+        </p>
+        <p class="table-cp2__link">Ty32AM6ZGPGKET8k6z</p>
+      </div>
+      <div class="table-cp2__row">
+        <p class="table-cp2__text">Статус</p>
+        <p class="table-cp2__link blue">
+          <span class="goToCheckerInfo">Ожидает активации</span>
+        </p>
+      </div>
+    </div>
+    <div class="cp2__btns">
+      <button type="button" class="cp2__btn">
+        <span class="_round-arrow"></span>
+        <span>Сбросить ключ</span>
+      </button>
+      <button type="button" class="cp2__btn">
+        <span class="_delete"></span>
+        <span>Отмена</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+        <section class="checkerInfo">
+  <div class="checkerInfo__wrapper">
+    <div class="checkerInfo__header">
+      <div class="checkerInfo__header-text">
+        <h4 class="checkerInfo__header-title">skype juniors</h4>
+        <p class="checkerInfo__header-subtitle">
+          Информация полученная от чекера
+        </p>
+      </div>
+      <button class="checkerInfo__header-btn">
+        <span class="_shield"></span> Вынести вердикт
+      </button>
+    </div>
+    <h5 class="checkerInfo__list-title">Информация о системе</h5>
+    <ul class="checkerInfo__list">
+      <li class="checkerInfo__item">
+        <p class="checkerInfo__item-prop">Операционная система</p>
+        <p class="checkerInfo__item-value">Windows 10 Professional</p>
+      </li>
+      <li class="checkerInfo__item">
+        <p class="checkerInfo__item-prop">
+          Дата установки операционной системы
+        </p>
+        <p class="checkerInfo__item-value">01.01.24 01:37:59 (16 дней)</p>
+      </li>
+      <li class="checkerInfo__item">
+        <p class="checkerInfo__item-prop">Время запуска</p>
+        <p class="checkerInfo__item-value">16.01.24 20:02 (1 час)</p>
+      </li>
+    </ul>
+    <h5 class="checkerInfo__list-title">Steam аккаунт</h5>
+    <ul class="checkerInfo__list">
+      <li class="checkerInfo__item">
+        <p class="checkerInfo__item-prop">Имя пользователя</p>
+        <p class="checkerInfo__item-value">путь к леону</p>
+      </li>
+      <li class="checkerInfo__item">
+        <p class="checkerInfo__item-prop">Идентификатор Steam</p>
+        <p class="checkerInfo__item-value">76561198340773698</p>
+      </li>
+      <li class="checkerInfo__item">
+        <p class="checkerInfo__item-prop">VAC</p>
+        <p class="checkerInfo__item-value">Отсутствует</p>
+      </li>
+    </ul>
+    <h5 class="checkerInfo__list-title">Связанные аккаунты (16)</h5>
+    <ul class="checkerInfo__list">
+      <li class="checkerInfo__item-grid">
+        <p class="checkerInfo__item-prop">chronium</p>
+        <p class="checkerInfo__item-value">путь к леону</p>
+        <p class="checkerInfo__item-prop">Идентификатор Steam</p>
+        <p class="checkerInfo__item-value">76561198340773698</p>
+        <p class="checkerInfo__item-prop">Дата регистрации</p>
+        <p class="checkerInfo__item-value">16.01.24 (30 дней)</p>
+        <p class="checkerInfo__item-prop">Дата покупки игры</p>
+        <p class="checkerInfo__item-value">31.12.23 12:34:56 (30 дней)</p>
+        <p class="checkerInfo__item-prop">VAC</p>
+        <p class="checkerInfo__item-value">Отсутствует</p>
+      </li>
+      <li class="checkerInfo__item-grid">
+        <p class="checkerInfo__item-prop">chronium</p>
+        <p class="checkerInfo__item-value">путь к леону</p>
+        <p class="checkerInfo__item-prop">Идентификатор Steam</p>
+        <p class="checkerInfo__item-value">76561198340773698</p>
+        <p class="checkerInfo__item-prop">Дата регистрации</p>
+        <p class="checkerInfo__item-value">16.01.24 (30 дней)</p>
+        <p class="checkerInfo__item-prop">Дата покупки игры</p>
+        <p class="checkerInfo__item-value">31.12.23 12:34:56 (30 дней)</p>
+        <p class="checkerInfo__item-prop">VAC</p>
+        <p class="checkerInfo__item-value red-value">Присутствует</p>
+      </li>
+    </ul>
+    <h5 class="checkerInfo__list-title">USB-устройства</h5>
+    <div class="checkerInfo__list-grid">
+      <div class="checkerInfo__item-table-header">
+        <p class="checkerInfo__item-table-header-title">Имя</p>
+        <p class="checkerInfo__item-table-header-title">Описание</p>
+        <p class="checkerInfo__item-table-header-title">VID</p>
+        <p class="checkerInfo__item-table-header-title">PID</p>
+        <p class="checkerInfo__item-table-header-title">Дата изменения</p>
+        <p class="checkerInfo__item-table-header-title">ID</p>
+        <div class="checkerInfo__item-table-grid">
+            <div class="checkerInfo__item-table-subgrid">
+                <p class="checkerInfo__item-table-field-name">HyperX Cloud Alpha S</p>
+                <p class="checkerInfo__item-table-field-desc">Составное устройство USB</p>
+                <p class="checkerInfo__item-table-field-vid">7d3f</p>
+                <p class="checkerInfo__item-table-field-pid">7d3f</p>
+                <p class="checkerInfo__item-table-field-date">08.02 01:04:31</p>
+                <p class="checkerInfo__item-table-field-id">USB\VID_1B3F&PID_29534</p>
+            </div>
+            <div class="checkerInfo__item-table-subgrid">
+                <p class="checkerInfo__item-table-field-name">HyperX Cloud Alpha S</p>
+                <p class="checkerInfo__item-table-field-desc">Составное устройство USB</p>
+                <p class="checkerInfo__item-table-field-vid">7d3f</p>
+                <p class="checkerInfo__item-table-field-pid">7d3f</p>
+                <p class="checkerInfo__item-table-field-date">08.02 01:04:31</p>
+                <p class="checkerInfo__item-table-field-id">USB\VID_1B3F&PID_29534</p>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+        <section class="verdictPage ">
+  <div class="verdictPage__wrapper">
+    <h4 class="verdictPage__title">skype juniors</h4>
+    <p class="verdictPage__subtitle">Вердикт</p>
+    <form class="verdictPage__checkForm" action="#">
+      <h5 class="verdictPage__checkForm-title">Заполните результат проверки</h5>
+      <div class="verdictPage__checkForm-fields">
+        <div class="verdictPage__checkForm-field">
+          <p class="verdictPage__checkForm-field-prop">Вердикт<span>*</span></p>
+          <div class="verdictPage__checkForm-choose-input">
+            <span>Игрок чист</span>
+            <span class="double-arrow"></span>
+            <div class="verdictPage__checkForm-choose-input-fields">
+              <p class="verdictPage__checkForm-choose-input-field">
+                Найдены читы
+              </p>
+              <p class="verdictPage__checkForm-choose-input-field">
+                Игрок чист
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="verdictPage__checkForm-field">
+          <p class="verdictPage__checkForm-field-prop">
+            Имя пользователя Discord<span>*</span>
+          </p>
+          <input
+            required
+            class="verdictPage__checkForm-field-input"
+            type="text"
+          />
+        </div>
+        <div class="verdictPage__checkForm-field">
+          <p class="verdictPage__checkForm-field-prop">
+            Идентификатор Discord<span>*</span>
+          </p>
+          <input
+            required
+            class="verdictPage__checkForm-field-input"
+            type="text"
+          />
+        </div>
+      </div>
+      <h5 class="verdictPage__checkForm-title">Добавьте доказательства</h5>
+      <div class="verdictPage__checkForm-proofs">
+        <div class="verdictPage__checkForm-proofs-item">
+          <img
+            class="verdictPage__checkForm-proofs-img"
+            src="img/users-photo.jpg"
+            alt="img"
+          />
+          <button type="button" class="verdictPage__checkForm-proofs-del">
+            <span class="_delete"></span>
+          </button>
+        </div>
+        <div class="verdictPage__checkForm-proofs-item">
+          <button type="button">Загрузить </br> фото</button>
+        </div>
+        <div class="verdictPage__checkForm-proofs-item">
+          <button type="button">Загрузить </br> фото</button>
+        </div>
+        <div class="verdictPage__checkForm-proofs-item">
+          <button type="button">Загрузить </br> фото</button>
+        </div>
+      </div>
+      <h5 class="verdictPage__checkForm-small-title">Ссылка на видео</h5>
+      <p class="verdictPage__checkForm-small-subtitle">При наличии</p>
+      <input class="verdictPage__checkForm-link" type="text" />
+      <button class="verdictPage__checkForm-btn">
+        Сохранить
+      </button>
+    </form>
+  </div>
+</section>
+
+        
+      </main>
+      <script defer src="js/app.min.js?_v=20240317215535"></script>
+    </div>
+  </body>
+</html>

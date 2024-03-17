@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Inter:wght@500;600;700&display=swap&_v=20240317215535"
+    rel="stylesheet"
+  />
+  
+  <link rel="stylesheet" href="css/style.min.css?_v=20240317215535" />
+  <title>Cheat Checkers</title>
+</head>
+
+
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <aside class="sidebar">
+    <div class="sidebar__wrapper">
+      <div class="sidebar__header header-sidebar">
+        <a class="header-sidebar__avatar" href="#">
+          <img
+            class="header-sidebar__avatar-img"
+            src="img/avatar.jpg"
+            alt="profile"
+          />
+          <span class="header-sidebar__name">knight</span>
+        </a>
+        <div class="header-sidebar__btns">
+          <button class="header-sidebar__note-btn _notifications"></button>
+          <button class="header-sidebar__exit-btn _exit"></button>
+        </div>
+        
+      </div>
+      <div class="sidebar__block block-sidebar">
+        <h5 class="block-sidebar__title">Общее</h5>
+        <ul class="block-sidebar__list">
+          <li class="block-sidebar__item">
+            <button style="margin-bottom: 3px;" id="main" class="block-sidebar__btn">
+              <a class="block-sidebar-link" href="index.html"><span class="_home"></span>Главная</a>
+            </button>
+          </li>
+          <li class="block-sidebar__item">
+            <div data-spollers data-one-spoller class="block-sidebar__spoller">
+              <div class="block-sidebar__spoller-title">
+                <button
+                  class="block-sidebar__btn active spolleractive"
+                  tabindex="-1"
+                  type="button"
+                  data-spoller
+                >
+                <span class="_users"></span>Пользователи
+                </button>
+                <div class="block-sidebar__spoller-text">
+                    <div >
+                      <button id="moderators">
+                        <a class="block-sidebar-link" href="moderators.html"><span class="_moderators"></span>Модераторы</a>
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__block block-sidebar">
+        <h5 class="block-sidebar__title">Модерация</h5>
+        <ul class="block-sidebar__list">
+          <li class="block-sidebar__item">
+            <div class="block-sidebar__spoller">
+              <div class="block-sidebar__spoller-title">
+                <div
+                  class="block-sidebar__btn"
+                  tabindex="-1"
+                >
+                  <a class="block-sidebar-link" href="check.html"><span class="_shield"></span>Проверка</a>
+                </div>
+              </div>
+              <!-- <div class="block-sidebar__spoller-text">
+                <div >
+                  <button id="history">
+                    <a class="block-sidebar-link" href="history.html"><span class="_clock"></span>История</a>
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__block block-sidebar">
+        <h5 class="block-sidebar__title">Настройки</h5>
+        <ul class="block-sidebar__list">
+          <li class="block-sidebar__item">
+            <button class="block-sidebar__btn">
+              <a class="block-sidebar-link" href="profile.html"><span class="_profile"></span>Профиль</a>
+            </button>
+          </li>
+          <li class="block-sidebar__item">
+            <button class="block-sidebar__btn">
+              <a class="block-sidebar-link" href="api.html"><span class="_control"></span>Управление API</a>
+            </button>
+          </li>
+          <li class="block-sidebar__item">
+            <button class="block-sidebar__btn">
+              <a class="block-sidebar-link" href="journal.html"><span class="_actions"></span>Журнал действий</a>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidebar__notifications notifications">
+      <div class="notifications__title">Уведомления</div>
+      <ul class="notifications__list">
+        <li class="notifications__item">
+          <div class="notifications__item-content">
+            <p class="notifications__item-title">AAAAAAAAAAAAAAAAAAAAAAuto layout</p>
+            <p class="notifications__item-date">2 февраля</p>
+          </div>
+          <a href="#" class="notifications__item-link">Читать &#8594</a>
+        </li>
+        <li class="notifications__item">
+          <div class="notifications__item-content">
+            <p class="notifications__item-title">Обновление 2.11.56SSSSSSSSSSSSSSSSSSSSSSSSSSS</p>
+            <p class="notifications__item-date">2 февраля</p>
+          </div>
+          <a href="#" class="notifications__item-link">Читать &#8594</a>
+        </li>
+        <li class="notifications__item">
+          <div class="notifications__item-content">
+            <p class="notifications__item-title">Обновление 2.11.56</p>
+            <p class="notifications__item-date">2 февраля</p>
+          </div>
+          <a href="#" class="notifications__item-link">Читать &#8594</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  
+  
+  
+  
+  
+        <section class="userpage">
+  <div class="userpage__wrapper">
+    <h2 class="userpage__title">Пользователи</h2>
+    <nav class="userpage__menu menu-userpage">
+      <ul class="menu-userpage__filter">
+        <li class="menu-userpage__filter-item">
+          <button class="menu-userpage__filter-btn active">
+            <span class="_users-all"></span>
+            <span>Все</span>
+          </button>
+        </li>
+        <li class="menu-userpage__filter-item">
+          <button class="menu-userpage__filter-btn">
+            <span class="_users-checked"></span>
+            <span>Проверенные</span>
+          </button>
+        </li>
+        <li class="menu-userpage__filter-item">
+          <button class="menu-userpage__filter-btn">
+            <span class="_users-blocked"></span>
+            <span>Заблокированные</span>
+          </button>
+        </li>
+      </ul>
+      <ul class="menu-userpage__sort">
+        <li class="menu-userpage__sort-item input">
+          <input class="menu-userpage__sort-input" placeholder="Поиск" />
+          <span class="_users-search"></span>
+        </li>
+        <li class="menu-userpage__sort-item">
+          <button class="menu-userpage__sort-btn">
+            <span class="_users-filter"></span>
+            <span>Фильтр</span>
+          </button>
+        </li>
+        <li class="menu-userpage__sort-item">
+          <button class="menu-userpage__sort-btn">
+            <span class="_users-sort"></span>
+            <span>Сортировка</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="userpage__table">
+      <div class="userpage__table-header">
+        <p class="userpage__table-header-title">Никнейм</p>
+        <p class="userpage__table-header-title">Платформа</p>
+        <p class="userpage__table-header-title">Игровой ID</p>
+        <p class="userpage__table-header-title">Проект</p>
+        <p class="userpage__table-header-title">Модератор</p>
+        <p class="userpage__table-header-title">Дата проверки</p>
+        <p class="userpage__table-header-title">Результат</p>
+        <p class="userpage__table-header-title"></p>
+      </div>
+      <div class="userpage__table-content">
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+        <div class="userpage__table-user">
+          <p class="userpage__table-user-value">
+            <img
+              class="userpage__table-user-logo"
+              src="img/user-acc-logo.png"
+              alt="user logo"
+            />
+            <span class="userpage__table-user-name">skype juniors</span>
+          </p>
+          <p class="userpage__table-user-value">Steam</p>
+          <p class="userpage__table-user-value">STEAM_0:0:624561251</p>
+          <p class="userpage__table-user-value">MAGICRUST</p>
+          <p class="userpage__table-user-value">7ommy</p>
+          <p class="userpage__table-user-value">04.02.2024 16:24</p>
+          <p class="userpage__table-user-value">Заблокирован (найдены читы)</p>
+          <p class="userpage__table-user-value">
+            <button class="userpage__table-user-btn" type="button">
+              Подробнее
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="userpage__pag">
+      <button type="button" class="userpage__pag-number active">1</button>
+      <button type="button" class="userpage__pag-number">2</button>
+      <button type="button" class="userpage__pag-number">3</button>
+      <button type="button" class="userpage__pag-number">4</button>
+      <div class="userpage__dots">
+        <button type="button" class="dots__dots-btn">...</button>
+        <div class="dots__wrapper">
+          <input type="text" class="dots__number" value="5" maxlength="4" />
+          <button class="dots__operator minus"></button>
+          <button class="dots__operator plus"></button>
+          <button class="dots__btn">Перейти</button>
+        </div>
+      </div>
+      <button type="button" class="userpage__pag-number">1085</button>
+    </div>
+  </div>
+
+  <div class="userpage__modal">
+    <div class="userpage__modal-main">
+      <div class="userpage__modal-header">
+        <h2 class="userpage__modal-title">
+          Информация о
+          <img
+            class="userpage__modal-header-img"
+            src="img/user-acc-logo.png"
+            alt="acc logo"
+          />
+          skype juniors
+        </h2>
+        <button class="userpage__modal-close _user-close"></button>
+      </div>
+      <div class="userpage__modal-container">
+        <nav class="userpage__modal-nav">
+          <ul class="userpage__modal-navlist">
+            <li class="userpage__modal-navlist-item">
+              <button class="userpage__modal-navlist-btn active" type="button">
+                <span class="_users-report"></span>
+                <span>Отчет</span>
+              </button>
+            </li>
+            <li class="userpage__modal-navlist-item">
+              <button class="userpage__modal-navlist-btn" type="button">
+                <span class="_users-info"></span>
+                <span>Информация об игроке</span>
+              </button>
+            </li>
+            <li class="userpage__modal-navlist-item">
+              <button class="userpage__modal-navlist-btn" type="button">
+                <span class="_users-proof"></span>
+                <span>Доказательства</span>
+              </button>
+            </li>
+            <li class="userpage__modal-navlist-item">
+              <button class="userpage__modal-navlist-btn" type="button">
+                <span class="_users-linked"></span>
+                <span>Связанные аккаунты</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div class="userpage__modal-report active">
+          <p class="userpage__modal-report-list-item">
+            Начало отчета skype juniors
+          </p>
+          <div class="userpage__modal-report-list-wrapper">
+            <p class="userpage__modal-report-list-title">
+              Среда, 31 января 2024
+            </p>
+            <div class="userpage__modal-report-long-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:22</span>
+              <span>Модератор 7ommy вызвал игрока на проверку</span>
+            </p>
+            <div class="userpage__modal-report-long-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:25</span>
+              <span
+                >Получен дискорд:
+                <span class="userpage__modal-report-acc">skype_juniors</span>
+                (1029176326021524679)</span
+              >
+            </p>
+            <div class="userpage__modal-report-long-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:36</span>
+              <span>Проверка завершена</span>
+            </p>
+            <div class="userpage__modal-report-short-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:36</span>
+              <span>Вынесен вердикт: Найдены читы</span>
+            </p>
+            <div class="userpage__modal-report-short-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:36</span>
+              <span>Установлен статус: Заблокирован</span>
+            </p>
+          </div>
+          <div class="userpage__modal-report-list-wrapper">
+            <p class="userpage__modal-report-list-title">
+              Понедельник, 5 января 2024
+            </p>
+            <div class="userpage__modal-report-long-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:22</span>
+              <span>Модератор 7ommy вызвал игрока на проверку</span>
+            </p>
+            <div class="userpage__modal-report-long-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:25</span>
+              <span
+                >Получен дискорд:
+                <span class="userpage__modal-report-acc">skype_juniors</span>
+                (1029176326021524679)</span
+              >
+            </p>
+            <div class="userpage__modal-report-long-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:36</span>
+              <span>Проверка завершена</span>
+            </p>
+            <div class="userpage__modal-report-short-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:36</span>
+              <span>Вынесен вердикт: Найдены читы</span>
+            </p>
+            <div class="userpage__modal-report-short-line"></div>
+            <p class="userpage__modal-report-list-item">
+              <span class="userpage__modal-report-time">18:36</span>
+              <span>Установлен статус: Заблокирован</span>
+            </p>
+          </div>
+        </div>
+        <div class="userpage__modal-info">
+          <div class="userpage__modal-info-header">
+            <div class="userpage__modal-info-text">
+              <h4 class="userpage__modal-info-title">Информация об игроке</h4>
+              <p class="userpage__modal-info-subtitle">
+                Ключевая информация связанная с игроком
+              </p>
+            </div>
+            <button class="userpage__modal-info-btn" type="button">
+              Профиль Steam
+            </button>
+          </div>
+          <ul class="userpage__modal-info-table">
+            <li class="userpage__modal-info-item">
+              <p class="userpage__modal-info-prop">Вердикт</p>
+              <p class="userpage__modal-info-value red">
+                Заблокирован (найдены читы)
+              </p>
+            </li>
+            <li class="userpage__modal-info-item">
+              <p class="userpage__modal-info-prop">Использованный ключ</p>
+              <p class="userpage__modal-info-value">Ty32AM6ZGPGKET8k6z</p>
+            </li>
+            <li class="userpage__modal-info-item">
+              <p class="userpage__modal-info-prop">IP-адрес</p>
+              <p class="userpage__modal-info-value">94.135.64.50</p>
+            </li>
+            <li class="userpage__modal-info-item">
+              <p class="userpage__modal-info-prop">Имя пользователя Steam</p>
+              <p class="userpage__modal-info-value">skype juniors</p>
+            </li>
+            <li class="userpage__modal-info-item">
+              <p class="userpage__modal-info-prop">Steam ID</p>
+              <p class="userpage__modal-info-value">STEAM_0:0:624561251</p>
+            </li>
+            <li class="userpage__modal-info-item">
+              <p class="userpage__modal-info-prop">Имя пользователя Discord</p>
+              <p class="userpage__modal-info-value">skype_juniors</p>
+            </li>
+            <li class="userpage__modal-info-item">
+              <p class="userpage__modal-info-prop">Discord ID</p>
+              <p class="userpage__modal-info-value">1029176326021524679</p>
+            </li>
+          </ul>
+        </div>
+        <div class="userpage__modal-proofs">
+          <div class="userpage__modal-proofs-header">
+            <div class="userpage__modal-proofs-text">
+              <h4 class="userpage__modal-proofs-title">Доказательства</h4>
+              <p class="userpage__modal-proofs-subtitle">
+                Неопровержимые доказательства нарушения
+              </p>
+            </div>
+            <button class="userpage__modal-proofs-btn" type="button">
+              <span class="_users-attach"></span>
+              <span>Прикрепить</span>
+            </button>
+          </div>
+          <ul class="userpage__modal-proofs-list">
+            <li class="userpage__modal-proofs-item">
+              <div class="userpage__modal-proofs-video">
+                <img
+                  class="userpage__modal-proofs-video-content"
+                  src="img/users-vid.jpg"
+                  alt="Proof"
+                />
+                <button class="userpage__modal-proofs-play">
+                  <span class="_users-play"></span>
+                </button>
+                <button class="userpage__modal-proofs-del">
+                  <span class="_delete"></span>
+                </button>
+              </div>
+              <p class="userpage__modal-proofs-text">Видео</p>
+            </li>
+            <li class="userpage__modal-proofs-item">
+              <div class="userpage__modal-proofs-photo">
+                <img
+                  class="userpage__modal-proofs-photo-content"
+                  src="img/users-photo.jpg"
+                  alt="Proof"
+                />
+                <button class="userpage__modal-proofs-eye">
+                  <span class="_users-eye"></span>
+                </button>
+                <button class="userpage__modal-proofs-del">
+                  <span class="_delete"></span>
+                </button>
+              </div>
+              <p class="userpage__modal-proofs-text">Фото</p>
+            </li>
+            <li class="userpage__modal-proofs-item">
+              <div class="userpage__modal-proofs-photo">
+                <img
+                  class="userpage__modal-proofs-photo-content"
+                  src="img/users-photo.jpg"
+                  alt="Proof"
+                />
+                <button class="userpage__modal-proofs-eye">
+                  <span class="_users-eye"></span>
+                </button>
+                <button class="userpage__modal-proofs-del">
+                  <span class="_delete"></span>
+                </button>
+              </div>
+            </li>
+            <li class="userpage__modal-proofs-item">
+              <div class="userpage__modal-proofs-photo">
+                <img
+                  class="userpage__modal-proofs-photo-content"
+                  src="img/users-photo.jpg"
+                  alt="Proof"
+                />
+                <button class="userpage__modal-proofs-eye">
+                  <span class="_users-eye"></span>
+                </button>
+                <button class="userpage__modal-proofs-del">
+                  <span class="_delete"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+
+          <div class="userpage__modal-proofs-del-modal">
+            <div class="userpage__modal-proofs-del-modal-main">
+              <h2 class="userpage__modal-proofs-del-modal-title">
+                Подтверждение
+              </h2>
+              <p class="userpage__modal-proofs-del-modal-text">
+                Вы уверены, что хотите выполнить это действие? Это действие
+                нельзя отменить.
+              </p>
+              <button class="userpage__modal-proofs-del-modal-del-btn">
+                Удалить
+              </button>
+              <button class="userpage__modal-proofs-del-modal-cancel-btn">
+                Отмена
+              </button>
+            </div>
+          </div>
+          <div class="userpage__modal-proofs-add-modal">
+            <div class="userpage__modal-proofs-add-modal-main">
+              <span class="_users-attach-modal"></span>
+              <p class="userpage__modal-proofs-add-modal-text">
+                Перенесите изображение сюда или вставьте ссылку на видео
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="userpage__modal-linked">
+          <h4 class="userpage__modal-linked-title">Связанные аккаунты</h4>
+          <p class="userpage__modal-linked-subtitle">
+            Список связанных аккаунтов с игроком
+          </p>
+          <ul class="userpage__modal-linked-table">
+            <li class="userpage__modal-linked-item">
+              <div class="userpage__modal-linked-item-text">
+                <p class="userpage__modal-linked-item-name red">
+                  ALEX_B_KyCTAX_HA_TAHKE (Заблокирован)
+                </p>
+                <p class="userpage__modal-linked-item-steam">
+                  STEAM_0:0:624561251
+                </p>
+              </div>
+              <div class="userpage__modal-linked-item-btns">
+                <button class="userpage__modal-linked-item-btn">
+                  Профиль Steam
+                </button>
+                <button class="userpage__modal-linked-item-btn blue">
+                  Подробнее
+                </button>
+              </div>
+            </li>
+            <li class="userpage__modal-linked-item">
+              <div class="userpage__modal-linked-item-text">
+                <p class="userpage__modal-linked-item-name">Ha_KoJleHu_OLenu</p>
+                <p class="userpage__modal-linked-item-steam">
+                  STEAM_0:1:9316465
+                </p>
+              </div>
+              <div class="userpage__modal-linked-item-btns">
+                <button class="userpage__modal-linked-item-btn">
+                  Профиль Steam
+                </button>
+                <button class="userpage__modal-linked-item-btn blue">
+                  Подробнее
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <script defer src="js/app.min.js?_v=20240317215535"></script>
+    </div>
+  </body>
+</html>
